@@ -1,0 +1,8 @@
+target/
+.settings/
+**/WEB-INF/classes/
+**/WEB-INF/lib/
+
+.classpath
+.project
+*.sqlite3
