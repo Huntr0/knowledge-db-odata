@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,6 +26,7 @@ public class Category implements Serializable
 	@Column(name = "TITLE", nullable = false, length = 50)
 	private String title;
 
+	@Lob
 	@Column(name = "DESCRIPTION", nullable = true, length = -1)
 	private String description;
 

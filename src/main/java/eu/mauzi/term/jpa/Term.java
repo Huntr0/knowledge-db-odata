@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -28,6 +29,7 @@ public class Term implements Serializable
 	@Column(name = "ABBREVIATION", nullable = true, length = 10)
 	private String abbreviation;
 
+	@Lob
 	@Column(name = "EXPLANATION", nullable = true, length = -1)
 	private String explanation;
 
