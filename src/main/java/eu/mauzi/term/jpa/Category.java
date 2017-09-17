@@ -25,6 +25,9 @@ public class Category implements Serializable
 	@Column(name = "TITLE", nullable = false, length = 50)
 	private String title;
 
+	@Column(name = "DESCRIPTION", nullable = true, length = -1)
+	private String description;
+
 	@Column(name = "NSFW", nullable = false)
 	private boolean nsfw;
 
@@ -50,6 +53,16 @@ public class Category implements Serializable
 	public void setTitle(String title)
 	{
 		this.title = title;
+	}
+
+	public String getDescription()
+	{
+		return description;
+	}
+
+	public void setDescription(String description)
+	{
+		this.description = description;
 	}
 
 	public boolean isNsfw()
