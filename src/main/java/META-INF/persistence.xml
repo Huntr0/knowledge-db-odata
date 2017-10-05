@@ -9,10 +9,8 @@
 		<class>eu.mauzi.term.jpa.Term</class>
 
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/TermOData" />
-			<property name="javax.persistence.jdbc.user" value="term_odata" />
-			<property name="javax.persistence.jdbc.password" value="uKfknyIK3Ws8CfMS8QBq" />
+			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:./TermCollection.sqlite3" />
 
 			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
 			<property name="eclipselink.logging.level" value="FINE" />
