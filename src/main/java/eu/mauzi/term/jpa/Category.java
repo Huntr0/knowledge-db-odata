@@ -33,7 +33,7 @@ public class Category implements Serializable
 	@Column(name = "NSFW", nullable = false)
 	private boolean nsfw;
 
-	@OneToMany(mappedBy = "category")
+	@OneToMany(mappedBy = "category", orphanRemoval = true)
 	private List<Term> terms;
 
 
