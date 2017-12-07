@@ -1,6 +1,5 @@
 package eu.mauzi.term.jpa;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -14,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "CATEGORY")
-public class Category implements Serializable
+public class Category extends JPAEntity
 {
 	private static final long serialVersionUID = 1L;
 

@@ -1,7 +1,5 @@
 package eu.mauzi.term.jpa;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TERM")
-public class Term implements Serializable
+public class Term extends JPAEntity
 {
 	private static final long serialVersionUID = 1L;
 

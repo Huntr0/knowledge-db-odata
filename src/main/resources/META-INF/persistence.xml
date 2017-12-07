@@ -6,6 +6,8 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
 		<class>eu.mauzi.term.jpa.Category</class>
+		<class>eu.mauzi.term.jpa.JPAEntity</class>
+		<class>eu.mauzi.term.jpa.System</class>
 		<class>eu.mauzi.term.jpa.Term</class>
 
 		<properties>
