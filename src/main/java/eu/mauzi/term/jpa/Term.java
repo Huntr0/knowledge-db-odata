@@ -1,5 +1,7 @@
 package eu.mauzi.term.jpa;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -31,12 +34,21 @@ public class Term extends JPAEntity
 	@Column(name = "EXPLANATION", nullable = true, length = -1)
 	private String explanation;
 
-	@Column(name = "CATEGORY_ID", nullable = false)
-	private int categoryId;
+	@Column(name = "NSFW", nullable = false)
+	private boolean nsfw;
+
+	@Column(name = "IS_CATEGORY", nullable = false)
+	private boolean isCategory;
+
+	@Column(name = "PARENT_ID", nullable = false)
+	private int parentId;
 
 	@ManyToOne
-	@PrimaryKeyJoinColumn(name = "CATEGORY_ID", referencedColumnName = "ID")
-	private Category category;
+	@PrimaryKeyJoinColumn(name = "PARENT_ID", referencedColumnName = "ID")
+	private Term term;
+
+	@OneToMany(mappedBy = "term")
+	private List<Term> terms;
 
 
 	public int getId()
@@ -79,23 +91,53 @@ public class Term extends JPAEntity
 		this.explanation = explanation;
 	}
 
-	public int getCategoryId()
+	public boolean getNsfw()
 	{
-		return categoryId;
+		return nsfw;
 	}
 
-	public void setCategoryId(int categoryId)
+	public void setNsfw(boolean nsfw)
 	{
-		this.categoryId = categoryId;
+		this.nsfw = nsfw;
 	}
 
-	public Category getCategory()
+	public boolean getIsCategory()
 	{
-		return category;
+		return isCategory;
 	}
 
-	public void setCategory(Category category)
+	public void setIsCategory(boolean isCategory)
 	{
-		this.category = category;
+		this.isCategory = isCategory;
+	}
+
+	public int getParentId()
+	{
+		return parentId;
+	}
+
+	public void setParentId(int parentId)
+	{
+		this.parentId = parentId;
+	}
+
+	public Term getTerm()
+	{
+		return term;
+	}
+
+	public void setTerm(Term term)
+	{
+		this.term = term;
+	}
+
+	public List<Term> getTerms()
+	{
+		return terms;
+	}
+
+	public void setTerms(List<Term> terms)
+	{
+		this.terms = terms;
 	}
 }
