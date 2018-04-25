@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JPAEDMMappingModel xmlns="http://www.apache.org/olingo/odata2/jpa/processor/api/model/mapping">
+	<PersistenceUnit name="TermOData">
+		<EDMSchemaNamespace>TermOData</EDMSchemaNamespace>
+		<JPAEntityTypes>
+			<JPAEntityType name="Term">
+				<JPARelationships>
+					<JPARelationship name="term">Parent</JPARelationship>
+					<JPARelationship name="terms">Children</JPARelationship>
+				</JPARelationships>
+			</JPAEntityType>
+		</JPAEntityTypes>
+		<JPAEmbeddableTypes>
+		</JPAEmbeddableTypes>
+	</PersistenceUnit>
+</JPAEDMMappingModel>

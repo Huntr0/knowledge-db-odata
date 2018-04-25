@@ -10,14 +10,17 @@ import org.apache.olingo.odata2.jpa.processor.api.exception.ODataJPARuntimeExcep
 public class CustomODataJPAServiceFactory extends ODataJPAServiceFactory
 {
 	private static final String PUNIT_NAME = "TermOData";
+	private static final String JPA_EDM_MAPPING_MODEL = "JPAEDMMappingModel.xml";
 
 
 	@Override
 	public ODataJPAContext initializeODataJPAContext() throws ODataJPARuntimeException
 	{
 		ODataJPAContext context = getODataJPAContext();
+
 		context.setEntityManagerFactory(Persistence.createEntityManagerFactory(PUNIT_NAME));
 		context.setPersistenceUnitName(PUNIT_NAME);
+		context.setJPAEdmMappingModel(JPA_EDM_MAPPING_MODEL);
 
 		return context;
 	}
