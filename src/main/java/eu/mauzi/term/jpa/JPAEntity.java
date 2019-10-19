@@ -17,7 +17,6 @@ public class JPAEntity implements Serializable
 	@Embedded
 	private System system;
 
-
 	@PrePersist
 	private void onCreate()
 	{

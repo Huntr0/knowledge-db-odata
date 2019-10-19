@@ -17,7 +17,6 @@ public class System implements Serializable
 	@Column(name = "UPDATED_AT", nullable = true)
 	private Timestamp updatedAt;
 
-
 	public Timestamp getCreatedAt()
 	{
 		return createdAt;

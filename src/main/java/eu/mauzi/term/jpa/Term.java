@@ -50,7 +50,6 @@ public class Term extends JPAEntity
 	@OneToMany(mappedBy = "term")
 	private List<Term> terms;
 
-
 	public int getId()
 	{
 		return id;

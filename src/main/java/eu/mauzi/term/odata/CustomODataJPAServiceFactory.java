@@ -12,7 +12,6 @@ public class CustomODataJPAServiceFactory extends ODataJPAServiceFactory
 	private static final String PUNIT_NAME = "TermOData";
 	private static final String JPA_EDM_MAPPING_MODEL = "JPAEDMMappingModel.xml";
 
-
 	@Override
 	public ODataJPAContext initializeODataJPAContext() throws ODataJPARuntimeException
 	{
